@@ -1,0 +1,17 @@
+{
+  "name": "code-clash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Kranthi2100/code-clash.git",
+  "author": "kranthi2100 <kranthi.alluri2100@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
