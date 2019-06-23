@@ -11,38 +11,38 @@ test_cases = [
   [["AAVAVS", "AAS"], "AAS"],
   [["", ""], ""],
   [["aaaaaaaa", "aa"], "aa"],
-  [["ASDASD","DAS"], "DAS"],
+  [["ASDASD", "DAS"], "DAS"],
   [["EFEFEFEEFF", "EEFF"], "EEFF"],
   [["", "AAdSDFS"], ""],
   [["AASDAS", "AAD"], "AAD"],
   [["AFAGTAB", "DBGTAB"], "GTAB"]
 ]
 
-function findSubstring(s1, s2){
+function findSubstring(s1, s2) {
   let substring = '';
   let cur = 0;
   let cur2 = 0;
   const len = s1.length;
   const len2 = s2.length;
-  while(cur < len && cur2 < len2){
-    if(s1[cur] === s2[cur2]){
+  while (cur < len && cur2 < len2) {
+    if (s1[cur] === s2[cur2]) {
       substring += s2[cur2]
       cur += 1;
       cur2 += 1;
-    }else{
+    } else {
       cur += 1;
     }
   }
   return substring;
 }
 
-function findLargestCommonSubstring(s1, s2){
+function findLargestCommonSubstring(s1, s2) {
   let longestSubstring = ''
-  for(let i = 0; i < s1.length; i++){
+  for (let i = 0; i < s1.length; i++) {
     let string = findSubstring(s1, s2.slice(i));
-    if(string !== ''){
-      if(longestSubstring.length < string.length)
-       longestSubstring = string;
+    if (string !== '') {
+      if (longestSubstring.length < string.length)
+        longestSubstring = string;
     }
   }
   return longestSubstring;
